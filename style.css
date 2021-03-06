@@ -1,0 +1,246 @@
+*{
+    box-sizing: border-box;
+}
+body{
+    font-family: 'Montserrat', sans-serif;
+}
+.container{
+    width: 100%;
+    padding-left: 15px;
+    padding-right: 15px;
+    margin-left: auto;
+    margin-right: auto;
+}
+.row{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-left: -15px;
+    margin-right: -15px;
+}
+[class*="col-"]{
+    padding-left: 15px;
+    padding-right: 15px;
+}
+.col-xs-12{
+    flex: 0 0 100%;
+    overflow-x: scroll;
+}
+/* Header */
+.header{
+    position: sticky;
+    max-width: 100%;
+    padding: 10px 0;
+    background-color: black;
+    top: 0;
+    z-index: 100;
+}
+.menu{
+    display: flex;
+    justify-content: start;
+}
+.menu > li > a{
+    display: block;
+    text-decoration: none;
+    font-size: 14px;
+    color: #fff;
+    padding: 10px;
+}
+.menu > li:hover > a{
+    padding-bottom: 8px;
+    border-bottom: 2px solid #fff;
+}
+.search {
+    width: 100%;
+    height: 25px;
+    border: 1px solid #fff;
+    border-radius: 3px;
+    display: block;
+    position: relative;
+}
+.input-search {
+    width: 100%;
+    height: 25px;
+    padding-left: 8px;
+    font-size: 14px;
+    color: #fff;
+    background-color: transparent;
+    border: none;
+    position: absolute;
+}
+.input-search:focus{ 
+    outline: none;
+}
+.input-search::placeholder {
+    color: #fff;
+}
+.input-button{
+    width: 15px;
+    height: 15px;
+    border: none;
+    background: url(images/loop.png) center no-repeat;
+    position: absolute;
+    top: 5px;
+    right: 15px;
+} 
+/* Slider */
+.slide{
+    position: relative;
+}
+.slide img {
+    width: 100%;
+}
+.slide-content{
+    font-size: 28px;
+    font-weight: 900;
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 45%;
+    left: 20%;
+}
+.sec-slide{
+    color: #fff;
+}
+.sec-slide > .slide-content{
+    left: 25%;
+}
+.btn{
+    width: 150px;
+    height: 50px;
+    border: none;
+    background-color: #000;
+    color: #fff;
+    margin: 15px 5px;
+    align-self: flex-end;
+}
+
+/* Snowboards */
+.snowboards{
+    padding: 75px 0;
+}
+.board-header{
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+}
+.board-header > h1{
+    padding: 30px 0;
+    font-size: 48px;
+}
+.board-header > img{
+    margin: 20px;
+}
+.boards{
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+.board{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    opacity: 0.7;
+    padding: 15px;
+}
+.board:hover{
+    opacity: 1;
+}
+
+@media(max-width: 375px){
+    .slide-content{
+        font-size: 22px;
+    }
+    .btn{
+        display: none;
+    }
+}
+@media(max-width: 767px){
+    .header-row{
+        flex-wrap: wrap;
+    }
+    .col-xs-3{
+        flex: 0 0 25%;
+        max-width: 25%;
+    }
+    .col-xs-9{
+        flex: 0 0 75%;
+        max-width: 75%;
+    }
+    .col-xs-6 {
+        flex: 0 0 50%;
+        max-width: 50%;
+        justify-content: space-between;
+        align-items: center;
+    }
+    .col-xs-hidden{
+        display: none;
+    }
+    .btn{
+        width: 100px;
+        height: 35px;
+        font-size: 10px;
+        margin: 10px 0;
+    }
+    .board-header > h1{
+        font-size: 32px;
+    }
+}
+@media(min-width: 768px){
+    .container{
+        max-width: 720px;
+    }
+    .col-sm-2{
+        flex: 0 0 16.66667%;
+        max-width: 16.66667%;
+    }
+    .col-sm-3{
+        flex: 0 0 25%;
+        max-width: 25%;
+    }
+    .col-sm-4{
+        flex: 0 0 33.33333%;
+        max-width: 33.33333%;
+    }
+    .col-sm-5{
+        flex: 0 0 41,66667%;
+        max-width: 41,66667%;
+    }
+    .col-sm-6{
+        flex: 0 0 50%;
+        max-width: 50%;
+    }
+    .col-sm-7{
+        flex: 0 0 58.33333%;
+        max-width: 58.33333%;
+    }
+    .col-sm-8{
+        flex: 0 0 66.6666667%;
+        max-width: 66.6666667%;
+    }
+    .col-sm-12{
+        flex: 0 0 100%;
+        width: 100%;
+    }
+    .input-button{
+        display: none;
+    }
+    .slide-content{
+        font-size: 50px;
+    }
+}
+@media(min-width: 992px){
+    .container{
+        max-width: 960px;
+    }
+    .input-button{
+        display: block;
+    }
+    .slide-content{
+        font-size: 72px;
+    }
+}
+@media(min-width: 1200px){
+    .container{
+        max-width: 1140px;
+    }
+}
